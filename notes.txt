@@ -1,0 +1,7 @@
+Super User: admin
+Password: admin@123
+
+Move the sensitive configurations to .env file.
+create an initial_data.json file
+
+Add docker file
