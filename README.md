@@ -9,7 +9,7 @@ The TaskBoard app is a collaborative project management tool designed to help te
 
 2. Clone the Taskboard App repository to your local machine:
    ```shell
-   git clone https://github.com/your-username/taskboard-app.git
+   git clone https://github.com/prathameshh27/TaskBoard.git
    ```
 
 3. Navigate to the project directory:
