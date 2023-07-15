@@ -5,5 +5,5 @@ from .views.views import index
 
 urlpatterns = [
     path('', index),
-    path('v1/', include("apps.api.versions.v1.urls"))
+    path('v1/', include("apps.api.vers.v1.urls"))
 ]

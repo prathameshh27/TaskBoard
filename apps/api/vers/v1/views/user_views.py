@@ -1,4 +1,4 @@
-from apps.api.versions.v1.viewsets.user_viewset import UserViewSet
+from apps.api.vers.v1.viewsets.user_viewset import UserViewSet
 from rest_framework.decorators import api_view
 from apps.lib.utils.functions import export_request
 

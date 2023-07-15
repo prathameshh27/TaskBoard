@@ -1,4 +1,4 @@
-from apps.api.versions.v1.viewsets.team_viewset import TeamViewSet
+from apps.api.vers.v1.viewsets.team_viewset import TeamViewSet
 from rest_framework.decorators import api_view
 from apps.lib.utils.functions import export_request
 
