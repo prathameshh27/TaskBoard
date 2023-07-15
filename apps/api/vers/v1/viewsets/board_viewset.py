@@ -3,6 +3,7 @@ from apps.lib.base.project_board_base import ProjectBoardBase
 from ..serializers.team_serializer import Team
 from ..serializers.board_serializer import BoardSerializer, ExpBoardSerializer, Board
 from ..serializers.task_serializer import TaskSerializer, Task
+from copy import deepcopy
 from apps.lib.utils.functions import (
     drf_resp_excp_handler, 
     get_validation_errors, 
@@ -190,8 +191,8 @@ class BoardViewSet(ProjectBoardBase):
             board = Board.get_board(id=board_id)
             if board:
                 board_serializer = ExpBoardSerializer(board, many=False)
-                
-                filename, filepath = export_taskboard(board_serializer.data)   
+                exportable_board = deepcopy(board_serializer.data)
+                filename, filepath = export_taskboard(exportable_board)
                 response = {
                     "filepath" : filepath,
                     "export_data" : board_serializer.data

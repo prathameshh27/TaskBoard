@@ -49,6 +49,7 @@ def export_taskboard(json_obj)->tuple:
     try:
         COL_COUNT = 20
         task_list = []
+        rm_fields = ("board_id", "team_id", "user_id",)
 
         task_list.append([" "] * COL_COUNT)
 
@@ -75,8 +76,8 @@ def export_taskboard(json_obj)->tuple:
 
         for task in board_tasks:
 
-            task.pop("board", None)
-            task.pop("team", None)
+            for field in rm_fields:
+                task.pop(field, None)
 
             if row_count == 1:
                 header = list(task.keys())
